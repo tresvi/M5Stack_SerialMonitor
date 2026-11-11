@@ -1,55 +1,40 @@
-# Prerequisites
-*.d
+# --- Compilacion (PlatformIO / Bruce) ---
+# El arbol de Bruce se arma fuera del repo (tools/build.ps1 -> %USERPROFILE%\src\Bruce),
+# pero si alguien lo clona adentro, que no se suba.
+Bruce/
+.pio/
+.pioenvs/
+.piolibdeps/
+build/
 
-# Object files
+# Objetos y salidas intermedias de C/C++
+*.d
 *.o
-*.ko
 *.obj
 *.elf
-
-# Linker output
-*.ilk
 *.map
-*.exp
-
-# Precompiled Headers
+*.a
 *.gch
 *.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
 *.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+*.dll
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# El unico binario versionado es firmware/Bruce-m5stack-cardputer.bin
+*.bin
+!firmware/Bruce-m5stack-cardputer.bin
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Logs y temporales
+*.log
+*.tmp
 
-# debug information files
-*.dwo
+# Python
+__pycache__/
+*.pyc
+
+# Editores / sistema
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
